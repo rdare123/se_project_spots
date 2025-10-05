@@ -1,0 +1,36 @@
+.cards {
+  /*alignment and spacing for cards*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  column-gap: 20px;
+  row-gap: 40px;
+  border-bottom: #212121b3 solid 1px;
+  padding-bottom: 40px;
+  justify-self: center;
+}
+
+.cards__card {
+  /*mixing the indivdual card with the grid container to match BEM requirements*/
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1320px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 630px) and (max-width: 1320px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 630px) {
+  .cards {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    padding-bottom: 20px;
+  }
+}

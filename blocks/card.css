@@ -1,0 +1,66 @@
+.card__image {
+  /*setting image width & keeping it a square*/
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+}
+
+.card__name {
+  /*aligning*/
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  margin: 12px 0 0 0;
+}
+
+.card__title {
+  /*setting text settings*/
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #212121;
+  margin: 0;
+
+  /*text overflow*/
+  max-width: calc(
+    100% - 15px
+  ); /*using calc function to let the text wrap automatically at various sizes*/
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card__like-icon {
+  /*opacity & transition*/
+  opacity: 0.4;
+  transition: 0.3s ease-in-out;
+  margin-left: auto;
+}
+
+.card__like-icon:hover {
+  /*opacity & transition*/
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 630px) {
+  .card__image {
+    max-width: 413px;
+    max-height: 413px;
+  }
+
+  .card__name {
+    max-width: 413px; /*matching card__name size to card__image size to prevent it from causing the container to grow*/
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 630px) {
+  .card__image {
+    max-width: 288px;
+    max-height: 288px;
+  }
+
+  .card__name {
+    max-width: 288px; /*matching card__name size to card__image size to prevent it from causing the container to grow*/
+  }
+}
