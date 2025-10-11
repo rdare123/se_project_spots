@@ -1,23 +1,23 @@
 .profile {
   /*general profile section layout & border*/
-  display: grid;
   width: 90%;
   border-bottom: #212121b3 solid 1px;
+
+  display: flex;
 }
 
 .profile__image {
   /*alignment & sizing*/
-  grid-area: image;
   justify-self: center;
   margin-bottom: 20px;
   border-radius: 8px;
   height: 190px;
   width: 190px;
+  margin: 0 20px 20px 0;
 }
 
 .profile__text {
   /*alignment for text column*/
-  grid-area: text;
   max-width: 420px;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
 .profile__title {
   /*text settings for profile name*/
   margin: 0 0 12px;
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 500;
   line-height: 1;
   color: #212121;
@@ -43,7 +43,7 @@
 .profile__subtitle {
   /*text settings for profile desc*/
   margin: 0;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   color: #212121;
@@ -57,19 +57,23 @@
   -webkit-box-orient: vertical;
 }
 
-.profile__edit {
+.profile__edit-btn {
+  cursor: pointer;
+
   /*aligning*/
   display: flex;
   flex-direction: row;
   gap: 8px;
   justify-content: center;
+  margin: auto 0 20px 0;
+  align-self: flex-start;
 
   /*removing button bg*/
   background-color: #00000000;
   border: none;
 
   /*setting text settings*/
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   color: #212121;
@@ -79,14 +83,14 @@
   transition: 0.3s ease-in-out;
 }
 
-.profile__edit:hover {
+.profile__edit-btn:hover {
   /*opacity transitions*/
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
 
 .profile__button {
-  grid-area: button;
+  cursor: pointer;
 
   /*aligning button*/
   display: flex;
@@ -106,7 +110,7 @@
   border-style: none;
 
   /*setting text styles*/
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   color: #fcf5e5;
@@ -122,38 +126,15 @@
   transition: 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 630px) {
-  /*tablet & desktop view changes*/
-  .profile {
-    grid-template-columns: auto 1fr 1fr;
-    grid-template-areas: "image text button";
-    gap: 20px;
-  }
-
-  .profile__button {
-    align-self: end;
-    margin: 0 0 20px auto;
-  }
-
-  .profile__edit {
-    margin: auto 0 20px 0;
-    align-self: flex-start;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 630px) {
+@media screen and (max-width: 627px) {
   /*mobile view - only change what will change in mobile view.*/
   /*basic adjustments for mobile such as alignment and sizing.*/
   .profile {
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:
-      "image"
-      "text"
-      "button";
+    flex-direction: column;
   }
 
   .profile__image {
-    margin-bottom: 12px;
+    margin: 0 auto 12px auto;
     height: 80px;
     width: 80px;
   }
@@ -161,12 +142,12 @@
   .profile__text {
     text-align: center;
     justify-self: center;
-    margin: 0 0;
+    margin: 0 auto;
   }
 
   .profile__title {
     margin: 0 auto 6px;
-    font-size: 1.2rem;
+    font-size: 20px;
   }
 
   .profile__subtitle {
@@ -178,7 +159,7 @@
     margin: 0 auto 20px;
   }
 
-  .profile__edit {
-    margin: auto 0 20px 0;
+  .profile__edit-btn {
+    margin: auto auto 20px auto;
   }
 }

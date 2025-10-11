@@ -17,3 +17,6 @@ The website can be viewed [here.](https://rdare123.github.io/se_project_spots/)
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
 
 Using Figma's tools, I was able to figure out the necessary spacing, text details, colors, etc., along with being able export SVGs and images required for the wesbite to function.
+
+**Project Pitch**
+[This video](https://drive.google.com/file/d/1YcdYTuKmTiMpgIGt4Dlqd3FgjVhLXDFw/view?usp=sharing) describes the project and how I handled some of the issues.
