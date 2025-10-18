@@ -1,7 +1,7 @@
 .profile {
   /*general profile section layout & border*/
   width: 90%;
-  border-bottom: #212121b3 solid 1px;
+  border-bottom: 1px solid #21212166;
 
   display: flex;
 }

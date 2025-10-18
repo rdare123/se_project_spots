@@ -1,0 +1,37 @@
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin: auto;
+  max-width: 730px;
+  width: 100%;
+}
+
+.modal__form {
+  margin: 32px 50px;
+}
+
+@media screen and (max-width: 627px) {
+  .modal__container {
+    max-width: 300px;
+  }
+
+  .modal__form {
+    margin: 12px;
+  }
+}
