@@ -1,4 +1,4 @@
-initialCards = [
+const initialCards = [
   1 ==
     {
       name: "Val Thorens",
