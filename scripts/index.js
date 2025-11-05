@@ -54,21 +54,21 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 //Event Listeners
 
 newPostOpen.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 });
 
 editProfileOpen.addEventListener("click", function () {
-  editProfileModal.classList.add("modal_is-opened");
+  openModal(editProfileModal);
   profileNameInput.value = profileName.textContent;
   profileDescInput.value = profileDesc.textContent;
 });
 
 newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 });
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
@@ -84,7 +84,7 @@ function handleEditProfileSubmit(e) {
 
   editProfileForm.reset();
 
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 }
 
 function handlePostSubmit(e) {
@@ -95,6 +95,14 @@ function handlePostSubmit(e) {
 
   newPostForm.reset();
   newPostModal.classList.remove("modal_is-opened");
+}
+
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
 }
 
 initialCards.forEach((element) => {
