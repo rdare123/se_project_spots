@@ -55,6 +55,12 @@
   position: absolute;
   top: 0px;
   right: -50px;
+  transition: 0.3s ease-in-out;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.4;
+  transition: 0.3s ease-in-out;
 }
 
 .modal__caption-bg {

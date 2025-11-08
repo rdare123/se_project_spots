@@ -109,7 +109,7 @@ function handlePostSubmit(e) {
   cardContainer.prepend(cardElement);
 
   newPostForm.reset();
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 }
 
 function openModal(modal) {

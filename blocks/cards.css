@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+.cards__list {
+  margin: 0;
+  padding: 0;
+}
+
 .cards__card {
   /*mixing the indivdual card with the grid container to match BEM requirements*/
   margin: 0 auto;
