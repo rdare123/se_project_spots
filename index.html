@@ -57,101 +57,18 @@
 
       <main class="content">
         <section class="cards">
-          <div class="cards__card card">
-            <img
-              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-              alt="An image of a snowy landscape through a window"
-              class="card__image"
-            />
-            <div class="card__name">
-              <p class="card__title">Val Thorens</p>
-              <img
-                src="./images/like-icon.svg"
-                alt="Like"
-                class="card__like-icon"
-              />
-            </div>
-          </div>
-
-          <div class="cards__card card">
-            <img
-              src="./images/2-photo-by-ceiline-from-pexels.jpg"
-              alt="An image of a restaurant on the street"
-              class="card__image"
-            />
-            <div class="card__name">
-              <p class="card__title">Restaraunt Terrace</p>
-              <img
-                src="./images/like-icon.svg"
-                alt="Like"
-                class="card__like-icon"
-              />
-            </div>
-          </div>
-
-          <div class="cards__card card">
-            <img
-              src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-              alt="An image of an outdoor cafe"
-              class="card__image"
-            />
-            <div class="card__name">
-              <p class="card__title">An outdoor cafe</p>
-              <img
-                src="./images/like-icon.svg"
-                alt="Like"
-                class="card__like-icon"
-              />
-            </div>
-          </div>
-
-          <div class="cards__card card">
-            <img
-              src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-              alt="An image of a long bridge over a forest"
-              class="card__image"
-            />
-            <div class="card__name">
-              <p class="card__title">A very long bridge, over the forest...</p>
-              <img
-                src="./images/like-icon.svg"
-                alt="Like"
-                class="card__like-icon"
-              />
-            </div>
-          </div>
-
-          <div class="cards__card card">
-            <img
-              src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-              alt="An image of a tunnel filled with sunlight"
-              class="card__image"
-            />
-            <div class="card__name">
-              <p class="card__title">Tunnel with morning light</p>
-              <img
-                src="./images/like-icon.svg"
-                alt="Like"
-                class="card__like-icon"
-              />
-            </div>
-          </div>
-
-          <div class="cards__card card">
-            <img
-              src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-              alt="An image of a house in the snow"
-              class="card__image"
-            />
-            <div class="card__name">
-              <p class="card__title">Mountain house</p>
-              <img
-                src="./images/like-icon.svg"
-                alt="Like"
-                class="card__like-icon"
-              />
-            </div>
-          </div>
+          <ul>
+            <template id="card-template">
+              <li class="cards__card card">
+                <button class="card__delete-icon" type="button"></button>
+                <img src="" alt="" class="card__image" />
+                <div class="card__name">
+                  <p class="card__title"></p>
+                  <button class="card__like-icon"></button>
+                </div>
+              </li>
+            </template>
+          </ul>
         </section>
       </main>
 
@@ -240,6 +157,16 @@
               <button class="form__save-btn" type="submit">Save</button>
             </fieldset>
           </form>
+        </div>
+      </div>
+
+      <div class="modal" id="preview-modal">
+        <div class="modal__img-container">
+          <button class="modal__close-btn" type="button"></button>
+          <img src="" alt="" class="modal__image" />
+          <div class="modal__caption-bg">
+            <p class="modal__caption"></p>
+          </div>
         </div>
       </div>
     </div>
