@@ -50,11 +50,10 @@ const modalClose = cardModal.querySelector(".modal__close-btn");
 const previewImg = cardModal.querySelector(".modal__image");
 const previewCaption = cardModal.querySelector(".modal__caption");
 
-const cardContainer = document.querySelector(".cards");
+const cardContainer = document.querySelector(".cards__list");
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
-const cardItem = cardTemplate.querySelector(".card__image");
 
 //Event Listeners
 
@@ -140,8 +139,8 @@ function getCardElement(data) {
   });
 
   cardImage.addEventListener("click", () => {
-    const cardTitle = cardItem.querySelector(".card__title");
-    const cardImage = cardItem.querySelector(".card__image");
+    const cardTitle = cardElement.querySelector(".card__title");
+    const cardImage = cardElement.querySelector(".card__image");
 
     previewImg.src = data.link;
     previewImg.alt = data.name;

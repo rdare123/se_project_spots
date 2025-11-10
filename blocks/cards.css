@@ -1,5 +1,10 @@
 .cards {
   /*alignment and spacing for cards*/
+}
+
+.cards__list {
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, 413px);
   width: 100%;
@@ -7,11 +12,6 @@
   row-gap: 40px;
   padding-bottom: 40px;
   justify-content: center;
-}
-
-.cards__list {
-  margin: 0;
-  padding: 0;
 }
 
 .cards__card {
